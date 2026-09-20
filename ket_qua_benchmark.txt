@@ -1,0 +1,74 @@
+============================================================
+K4-L3B BENCHMARK RUNNER
+Data directory: data\exchange_policy
+============================================================
+Loaded 7 files -> 89 chunks indexed.
+
+--- Query 1 ---
+Query:  Đối với yêu cầu Trả hàng/Hoàn tiền ở trạng thái Shopee đang xem xét, thời gian Shopee xử lý và gửi kết quả là bao lâu?
+Filter: {'audience': 'buyer'}
+Gold:   Trong vòng 3-5 ngày làm việc (không tính chủ nhật và các ngày lễ, Tết) qua Thông báo hoặc email.
+Top-3 Retrieved Chunks (with filter):
+  1. [shopee-buyer-return-request-guide#5] score=0.2073 doc_id=shopee-buyer-return-request-guide
+     Preview: ## 2. Thời gian xử lý và Hoàn tiền cho Người mua...
+  2. [shopee-general-return-policy#8] score=0.1948 doc_id=shopee-general-return-policy
+     Preview: | Lý do | Trường hợp áp dụng | Điều kiện áp dụng | |---|---|---| | Chưa nhận được hàng | Chưa nhận đ...
+  3. [shopee-general-return-policy#1] score=0.1637 doc_id=shopee-general-return-policy
+     Preview: ## 1. Điều kiện Trả hàng/Hoàn tiền của Shopee...
+
+--- Query 2 ---
+Query:  Nếu Shopee đồng ý cho Người mua Trả hàng & Hoàn tiền, Người mua phải hoàn tất gửi trả hàng trong bao lâu?
+Filter: {'audience': 'buyer'}
+Gold:   Trong vòng 6 ngày kể từ thời điểm nhận được thông báo gửi trả hàng từ Shopee.
+Top-3 Retrieved Chunks (with filter):
+  1. [shopee-buyer-return-request-guide#5] score=0.1903 doc_id=shopee-buyer-return-request-guide
+     Preview: ## 2. Thời gian xử lý và Hoàn tiền cho Người mua...
+  2. [shopee-return-shipping-fee-policy#2] score=0.1494 doc_id=shopee-return-shipping-fee-policy
+     Preview: - **Hình thức Lấy hàng tại nhà (Pickup):** Bưu tá của đối tác vận chuyển (SPX Express, Viettel Post,...
+  3. [shopee-general-return-policy#2] score=0.1453 doc_id=shopee-general-return-policy
+     Preview: ### 1.1. Nguyên tắc chung  Shopee hiện chưa hỗ trợ yêu cầu đổi hàng. Nếu hàng nhận được có vấn đề (k...
+
+--- Query 3 ---
+Query:  Khi Shopee thông báo quyết định hoàn tiền, Người Bán có thời hạn bao lâu để gửi phản hồi nếu không đồng ý?
+Filter: {'audience': 'seller'}
+Gold:   Trong vòng 02 ngày lịch kể từ ngày nhận được thông báo của Shopee.
+Top-3 Retrieved Chunks (with filter):
+  1. [shopee-mall-seller-terms-of-service#22] score=0.3077 doc_id=shopee-mall-seller-terms-of-service
+     Preview: - Người bán bị loại khỏi Shopee Mall nếu bị phát hiện có **02 lần vi phạm** liên quan đến hàng giả, ...
+  2. [shopee-mall-seller-terms-of-service#19] score=0.2290 doc_id=shopee-mall-seller-terms-of-service
+     Preview: Sản phẩm của nhà sản xuất thiết bị gốc (OEM) được phép đăng bán nếu không chứa logo của nhãn hiệu ch...
+  3. [shopee-mall-seller-terms-of-service#12] score=0.1583 doc_id=shopee-mall-seller-terms-of-service
+     Preview: Người bán chịu trách nhiệm đối với sự không tuân thủ, khiếm khuyết hoặc yêu cầu thu hồi liên quan đế...
+
+  [A/B Compare - Without Filter]:
+    1. [shopee-mall-seller-terms-of-service#22] score=0.3077 audience=seller
+       Preview: - Người bán bị loại khỏi Shopee Mall nếu bị phát hiện có **02 lần vi phạm** liên quan đến hàng giả, ...
+    2. [shopee-general-return-policy#11] score=0.3055 audience=buyer
+       Preview: | Hàng đã qua sử dụng | Sản phẩm có dấu hiệu đã qua sử dụng như bị bẩn, bị cạy mở hoặc không còn đủ ...
+    3. [shopee-general-return-policy#15] score=0.2819 audience=buyer
+       Preview: ### 2.1. Hoàn tiền ngay, không cần trả hàng  | Phạm vi khiếu nại | Mã giảm giá | Shopee Xu | |---|--...
+
+--- Query 4 ---
+Query:  Mức hoàn tiền ngay do Người Bán tự thỏa thuận và đề xuất với Người Mua không được thấp hơn bao nhiêu % giá trị sản phẩm?
+Filter: {'audience': 'seller'}
+Gold:   Không được thấp hơn 50% giá trị của Sản Phẩm Hoàn Trả.
+Top-3 Retrieved Chunks (with filter):
+  1. [shopee-mall-seller-terms-of-service#15] score=0.2913 doc_id=shopee-mall-seller-terms-of-service
+     Preview: Nếu yêu cầu hoàn tiền kèm trả hàng được chấp thuận, Shopee sắp xếp giao hàng hoàn đến địa chỉ trong ...
+  2. [shopee-mall-seller-terms-of-service#23] score=0.2367 doc_id=shopee-mall-seller-terms-of-service
+     Preview: ## 4. Quy định đóng gói  - Không sử dụng túi, hộp hoặc băng keo mang tên/logo của sàn thương mại điệ...
+  3. [shopee-mall-seller-terms-of-service#22] score=0.2170 doc_id=shopee-mall-seller-terms-of-service
+     Preview: - Người bán bị loại khỏi Shopee Mall nếu bị phát hiện có **02 lần vi phạm** liên quan đến hàng giả, ...
+
+--- Query 5 ---
+Query:  Thời hạn chuẩn để Người Mua gửi yêu cầu trả hàng/hoàn tiền là bao lâu và đối với thực phẩm tươi sống là bao lâu?
+Filter: {'audience': 'buyer'}
+Gold:   Thời hạn chuẩn là trong vòng 15 ngày kể từ khi đơn hàng giao thành công; riêng thực phẩm tươi sống và đông lạnh là trong vòng 24 giờ.
+Top-3 Retrieved Chunks (with filter):
+  1. [shopee-return-shipping-fee-policy#0] score=0.2082 doc_id=shopee-return-shipping-fee-policy
+     Preview: # Chính sách chi phí vận chuyển khi trả hàng dành cho Người mua...
+  2. [shopee-buyer-return-request-guide#5] score=0.2016 doc_id=shopee-buyer-return-request-guide
+     Preview: ## 2. Thời gian xử lý và Hoàn tiền cho Người mua...
+  3. [shopee-buyer-return-timeline-policy#3] score=0.1896 doc_id=shopee-buyer-return-timeline-policy
+     Preview: Quá thời hạn trên, nút "Trả hàng/Hoàn tiền" trên ứng dụng sẽ tự động ẩn và đơn hàng được chuyển sang...
+
